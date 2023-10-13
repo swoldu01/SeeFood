@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SeeFood README</title>
     <style>
-        /* Add any desired styling here */
+     
     </style>
 </head>
 <body>
