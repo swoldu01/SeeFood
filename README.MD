@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SeeFood README</title>
     <style>
-        /* Add any desired styling here */
     </style>
 </head>
 <body>
@@ -47,7 +46,6 @@
             <li>Footer: Links to About, Contact, Terms of Service, etc.</li>
         </ul>
     </li>
-    <!-- Add other wireframe details similarly -->
 </ol>
 
 <h3>User Stories:</h3>
@@ -80,12 +78,11 @@
     <li>Design pages based on wireframes.</li>
     <li>Use Axios for making requests to my backend.</li>
     <li>Implement user interactions like adding reviews, and searching for dishes/restaurants.</li>
-    <li>Styling: Use sexy visuals and ensure mobile-responsive.</li>
+    <li>Styling: Use tasty visuals and ensure mobile-responsive.</li>
 </ul>
 
 </body>
 </html>
-You can further enhance this by adding CSS for styling. This HTML format will render well in browsers, but if you're using platforms like GitHub for your README, they primarily support Markdown. If you're planning to host this README on a website, then the HTML format is perfect!
 
 
 
