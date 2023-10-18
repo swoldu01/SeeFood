@@ -3,6 +3,8 @@ const dishController = require('../controllers/dishC');
 const router = express.Router();
 
 router.get('/', dishController.getAllDishes);
-// Pending routes
+
+router.get('/:dishId', dishController.getDishById);
+
 
 module.exports = router;

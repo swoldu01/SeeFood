@@ -3,6 +3,9 @@ const restaurantController = require('../controllers/restaurantC');
 const router = express.Router();
 
 router.get('/', restaurantController.getAllRestaurants);
-// Pending
+
+router.get('/:id', restaurantController.getRestaurantById);
+
+router.get('/:restaurantId/dishes/:dishId', restaurantController.getSpecificDishInRestaurant);
 
 module.exports = router;

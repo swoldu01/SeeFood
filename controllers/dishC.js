@@ -10,4 +10,15 @@ exports.getAllDishes = async (req, res) => {
     }
 };
 
+exports.getDishById = async (req, res) => {
+    try {
+        const dish = await Dish.findById(req.params.dishId);
+        if (!dish) {
+            return res.status(404).json({ message: 'Dish not found' });
+        }
+        res.json(dish);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+};
 
