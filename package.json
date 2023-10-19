@@ -4,7 +4,7 @@
   "description": "## Features: - Search functionality for specific dishes and or restaurants. - Ability to see top-rated dishes in a particular area or cuisine. - Filter reviews based on dish type, dietary restrictions.",
   "main": "index.js",
   "scripts": {
-    "seed": "node seed/Products.js",
+    "seed": "node Seed.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "dev": "nodemon server.js"

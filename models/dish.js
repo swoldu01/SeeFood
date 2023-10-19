@@ -6,10 +6,10 @@ const dishSchema = new Schema(
     name: String,
     description: String,
     imageUrl: String,
-    restaurant: { type: Schema.Types.ObjectId, ref: 'restaurant' },
-    reviews: [{ type: Schema.Types.ObjectId, ref: 'review' }]
+    restaurant: { type: Schema.Types.ObjectId, ref: 'Restaurant' },
+    reviews: [{ type: Schema.Types.ObjectId, ref: 'Review' }]
 },
 { timestamps: true }
 );
-const Dish = mongoose.model('dish', dishSchema)
+const Dish = mongoose.model('Dish', dishSchema)
 module.exports = Dish;

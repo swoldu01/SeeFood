@@ -6,9 +6,9 @@ const userSchema = new Schema(
     username: String,
     email: String,
     password: String,
-    reviews: [{ type: Schema.Types.ObjectId, ref: 'review' }]
+    reviews: [{ type: Schema.Types.ObjectId, ref: 'Review' }]
 },
 { timestamps: true }
 );
-const User = mongoose.model('user', userSchema)
+const User = mongoose.model('User', userSchema)
 module.exports = User;

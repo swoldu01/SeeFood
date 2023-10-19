@@ -31,6 +31,7 @@ app.use('/restaurants', restaurantRoutes);
 app.use('/users', userRoutes);
 app.use('/dishes', dishRoutes);
 app.use('/reviews', reviewRoutes);
+app.use('/dishes/:dishId/reviews', reviewRoutes);
 app.use('/search', searchRoutes);
 
 app.listen(PORT, () => {

@@ -7,10 +7,10 @@ const restaurantSchema = new Schema(
     address: String,
     description: String,
     imageUrl: String,
-    dishes: [{ type: Schema.Types.ObjectId, ref: 'dish' }]
+    dishes: [{ type: Schema.Types.ObjectId, ref: 'Dish' }]
 },
 { timestamps: true }
 );
 
-const Restaurant = mongoose.model('restaurant', restaurantSchema)
+const Restaurant = mongoose.model('Restaurant', restaurantSchema)
 module.exports = Restaurant;
