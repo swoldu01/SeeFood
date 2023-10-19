@@ -4,28 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dish Description</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="dishP.js" defer></script>
-   
 </head>
 <body>
 
-<div id="dish-details">
-    <h2 id="dish-name"></h2>
-    <p id="dish-description"></p>
-    <p id="dish-rating"></p>
-    <!-- Pending additonal details -->
-</div>
+<header>
+    <h1>See Food</h1>
+</header>
 
-<h3>Reviews:</h3>
-<section id="reviews">
-    <!-- Reviews will be populated here -->
-</section>
+<nav>
+    <button onclick="goHome()">Home</button>
+    <button onclick="goBack()">Back</button>
+</nav>
 
-<form id="reviewForm">
-    <textarea id="reviewText" placeholder="Write your review..."></textarea>
-    <button type="submit">Submit Review</button>
-</form>
+<main>
+    <section id="dish-details">
+        <h2 id="dish-name"></h2>
+        <p id="dish-description"></p>
+        <p id="dish-rating"></p>
+        <!-- Pending additional details -->
+    </section>
+
+    <section id="reviewsSection">
+        <h3>Reviews:</h3>
+        <section id="reviews">
+            <!-- Reviews will be populated here -->
+        </section>
+
+        <form id="reviewForm">
+            <textarea id="reviewText" placeholder="Write your review..."></textarea>
+            <button type="submit">Submit Review</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    © 2023 Food Review Site
+</footer>
 
 </body>
 </html>
+

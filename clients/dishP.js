@@ -9,17 +9,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-function displayDishDetails(restaurantId, dishId) {
-    axios.get(`http://localhost:3001/restaurants/${restaurantId}/dishes/${dishId}`)
+function displayDishDetails(dishId) {
+    axios.get(`http://localhost:3001/dishes/${dishId}`)
         .then(response => {
             const dish = response.data;
-            const detailsDiv = document.getElementById('dish-details');
+            document.getElementById('dish-name').textContent = dish.name;
+            document.getElementById('dish-description').textContent = dish.description;
+            
+            // Once the dish details are populated, display the reviews for the dish
+            displayReviews(dishId);
+        })
+        .catch(err => {
+            console.error('Error fetching dish details:', err);
+        });
+}
 
-            // Construct the dish details HTML
-            let dishDetailsHTML = `
-                <h2>${dish.name}</h2>
-                <p>${dish.description}</p>
-            `;
 
             // // If there are reviews, construct the reviews HTML
             // if (dish.reviews && dish.reviews.length > 0) {
@@ -38,11 +42,11 @@ function displayDishDetails(restaurantId, dishId) {
 
             // // Set the constructed HTML to the details div
             // detailsDiv.innerHTML = dishDetailsHTML;
-        })
-        .catch(err => {
-            console.error('Error fetching dish details:', err);
-        });
-}
+//         })
+//         .catch(err => {
+//             console.error('Error fetching dish details:', err);
+//         });
+// }
 
 // Fetch and display reviews when the page loads
 function displayReviews(dishId) {
@@ -84,3 +88,12 @@ function deleteReview(reviewId) {
             console.error('Error deleting dish details:', err);
         });
     }
+
+    function goHome() {
+        window.location.href = '/clients';  // Redirects to the homepage
+    }
+    
+    function goBack() {
+        window.history.back();  // Goes back to the previous page in the browser history
+    }
+    

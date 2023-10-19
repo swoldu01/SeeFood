@@ -3,21 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Food Review Site</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="searchP.js" defer></script>
-    
-
 </head>
 <body>
-    <form id="searchForm">
-        <input type="text" id="searchInput" placeholder="Search for a dish or restaurant">
-        <select id="searchType">
-            <option value="restaurant">Restaurant</option>
-            <option value="dish">Dish</option>
-        </select>
-        <button type="submit">Search</button>
-      </form>
-      <div id="results"></div>
+    <header>
+        <h1>See Food</h1>
+    </header>
+    <main>
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Search for a dish or restaurant">
+            <select id="searchType">
+                <option value="restaurant">Restaurant</option>
+                <option value="dish">Dish</option>
+            </select>
+            <button type="submit">Search</button>
+        </form>
+        <div id="results"></div>
+    </main>
+    <footer>
+        © 2023 Food Review Site
+    </footer>
 </body>
 </html>

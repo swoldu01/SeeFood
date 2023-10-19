@@ -4,20 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Description</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="restaurantP.js" defer></script>
-   
 </head>
 <body>
-
-<div id="restaurant-details">
-    <h2 id="restaurant-name"></h2>
-    <p id="restaurant-description"></p>
-    <h3>Dishes:</h3>
-    <ul id="dishes-list">
-        <!-- Dishes will populate here -->
-    </ul>
-</div>
-
+    <header>
+        <h1>See Food</h1>
+    </header>
+    <nav>
+        <button onclick="goHome()">Home</button>
+        <button onclick="goBack()">Back</button>
+    </nav>
+    
+    <main>
+        <section id="restaurantDetails">
+            <h2 id="restaurant-name"></h2>
+            <p id="restaurant-description"></p>
+        </section>
+        <section id="dishList">
+            <h3>Dishes:</h3>
+            <ul id="dishes-list">
+                <!-- Dishes will populate here -->
+            </ul>
+        </section>
+    </main>
+    <footer>
+        © 2023 Food Review Site
+    </footer>
 </body>
 </html>

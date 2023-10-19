@@ -7,25 +7,34 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-
 function displayRestaurantDetails(restaurantId) {
     axios.get(`http://localhost:3001/restaurants/${restaurantId}`)
         .then(response => {
-            console.log(response.data)
             const restaurant = response.data;
-            console.log('Restaurant Data:', restaurant);
-            const detailsDiv = document.getElementById('restaurant-details');
-            detailsDiv.innerHTML = `
-                <h2>${restaurant.name}</h2>
-                <p>${restaurant.address}</p>
-                <ul>
-                    ${restaurant.dishes.map(dish => `<li><a href="/restaurants/${restaurantId}/dishes/${dish._id}">${dish.name}</a></li>`).join('')}
-                </ul>
-            `;
+            document.getElementById('restaurant-name').textContent = restaurant.name;
+            document.getElementById('restaurant-description').textContent = restaurant.address;
+
+            const dishesList = document.getElementById('dishes-list');
+            dishesList.innerHTML = restaurant.dishes.map(dish => `
+                <li>
+                    <a href="dishP.html" onclick="saveToLocalStorage('${dish._id}', 'dishId')">${dish.name}</a>
+                </li>
+            `).join('');
         })
         .catch(err => {
             console.error('Error fetching restaurant details:', err);
         });
-        
+}
+
+function saveToLocalStorage(id, key) {
+    localStorage.setItem(key, id);
+}
+
+function goHome() {
+    window.location.href = '/clients';  // Redirects to the homepage
+}
+
+function goBack() {
+    window.history.back();  // Goes back to the previous page in the browser history
 }
 
