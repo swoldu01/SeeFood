@@ -13,7 +13,7 @@ Relationships:
 - A restaurant can have many dishes.
 - A dish can have many reviews.
 
-![ERD Image](image.png)
+![Alt text](image-1.png)
 
 ### Wireframes:
 The following are the wireframe details for the Homepage, Restaurant Page, Dish Page, Review Form, and User Profile:
