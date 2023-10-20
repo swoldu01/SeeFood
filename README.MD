@@ -1,12 +1,9 @@
 # SeeFood
-
+![Alt text](image-1.png)
 ## Features:
 - Search functionality for specific dishes and or restaurants.
 - Ability to see top-rated dishes in a particular area or cuisine.
 - Filter reviews based on dish type, dietary restrictions.
-
-## Planning
-Github Repo: Create a new repository named **SeeFood**.
 
 ### ERD:
 Entities: User, Review, Restaurant, Dish, (maybe) Cuisine.
@@ -74,6 +71,7 @@ Advanced search filters, user profiles with their review history, top-rated dish
 
 ### Backend:
 - Set up Node, Express, and MongoDB.
+- Middleware use CORS, MORGAN, and Mongoose.
 - Design MongoDB schemas based on ERD.
 - Implement CRUD operations for each model.
 

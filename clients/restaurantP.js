@@ -17,7 +17,7 @@ function displayRestaurantDetails(restaurantId) {
             const dishesList = document.getElementById('dishes-list');
             dishesList.innerHTML = restaurant.dishes.map(dish => `
                 <li>
-                    <a href="dishP.html" onclick="saveToLocalStorage('${dish._id}', 'dishId')">${dish.name}</a>
+                    <a href="dishP.html" onclick="saveToLocalStorage('${dish._id}', 'dishId')">${dish.name} <br>Decription: ${dish.description}</br></a>
                 </li>
             `).join('');
         })
@@ -31,10 +31,10 @@ function saveToLocalStorage(id, key) {
 }
 
 function goHome() {
-    window.location.href = '/clients';  // Redirects to the homepage
+    window.location.href = '/clients'; 
 }
 
 function goBack() {
-    window.history.back();  // Goes back to the previous page in the browser history
+    window.history.back(); 
 }
 

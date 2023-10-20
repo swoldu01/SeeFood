@@ -24,14 +24,31 @@ const getRestaurantById = async (req, res) => {
     }
 };
 
+// const getRestaurantWithDishes = async (req, res) => {
+//     try {
+//         // Fetch the restaurant
+//         const restaurant = await Restaurant.findById(req.params.id);
+        
+//         if (!restaurant) {
+//             return res.status(404).json({ message: 'Restaurant not found' });
+//         }
+
+//         // Fetch the dishes related to the restaurant
+//         const dishes = await Dish.find({ '_id': { $in: restaurant.dishes } });
+
+//         // Attach the dishes to the restaurant object
+//         restaurant.dishes = dishes;
+
+//         res.json(restaurant);
+//     } catch (err) {
+//         res.status(500).json({ message: err.message });
+//     }
+// };
+
+
 // Route to fetch a specific dish within a specific restaurant
 const getSpecificDishInRestaurant = async (req, res) => {
     try {
-        const restaurant = await Restaurant.findById(req.params.restaurantId);
-        if (!restaurant) {
-            return res.status(404).json({ message: 'Restaurant not found' });
-        }
-
         const dish = await Dish.findOne({ _id: req.params.dishId, restaurant: req.params.restaurantId });
         if (!dish) {
             return res.status(404).json({ message: 'Dish not found in this restaurant' });
@@ -39,7 +56,7 @@ const getSpecificDishInRestaurant = async (req, res) => {
 
         res.json(dish);
     } catch (err) {
-        res.status(500).json({ message: 'Server error', error: err });
+        res.status(500).json({ message: 'Server error', error: err.message });
     }
 };
 
