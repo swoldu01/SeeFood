@@ -1,5 +1,5 @@
 # SeeFood
-![Alt text](image-1.png)
+![Alt text](image-2.png)
 ## Features:
 - Search functionality for specific dishes and or restaurants.
 - Ability to see top-rated dishes in a particular area or cuisine.
